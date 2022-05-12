@@ -49,8 +49,8 @@ module.exports = {
       inlineSource: '.(js|css)$', // embed all javascript and css inline // Works in conjunction with ...inline source plugin
       inject: 'body',
     }),
-    // new HtmlWebpackInlineSourcePlugin(),
-    // new CompressionPlugin(),
+    new HtmlWebpackInlineSourcePlugin(),
+    new CompressionPlugin(),
     new BundleAnalyzerPlugin({
       // analyzerHost: '0.0.0.0', // To make it work in the container
     }),

@@ -4,15 +4,18 @@ const commonConfig = require('./webpack.common')
 const devConfig = {
   mode: 'development',
   devtool: 'inline-source-map',
+  output: {
+    publicPath: '/',
+  },
   devServer: {
     port: 3000,
     historyApiFallback: true,
-    proxy: {
-      '/api': {
-        target: 'https://your-api-url',
-        changeOrigin: true,
-      },
-    },
+    // proxy: {
+    //   '/api': {
+    //     target: 'https://your-api-url',
+    //     changeOrigin: true,
+    //   },
+    // },
   },
 }
 
